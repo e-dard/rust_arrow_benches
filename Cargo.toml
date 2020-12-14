@@ -1,0 +1,32 @@
+[package]
+name = "rust_arrow_benches"
+version = "0.1.0"
+authors = ["Edd Robinson <me@edd.io>"]
+edition = "2018"
+
+[profile.release]
+debug = true
+
+[profile.bench]
+debug = true
+
+[dependencies]
+arrow = { git = "https://github.com/apache/arrow.git", rev = "5353c285c6dfb3381ac0f1c9e7cd63d7fcb8da4a" , features = ["simd"] }
+
+[dev-dependencies]
+criterion = "0.3"
+rand = "0.7.3"
+
+[[bench]]
+name = "filter"
+harness = false
+
+[[bench]]
+name = "filter_sum"
+harness = false
+
+[[bench]]
+name = "filter_max"
+harness = false
+
+
