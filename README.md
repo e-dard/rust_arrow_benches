@@ -4,7 +4,7 @@ Since these operations are almost always vectorisable there are a few technologi
 
 - LLVM's ability to auto-vectorise code in some cases;
 - SIMD (in general): That is, the ability to write vectorised code manually with SIMD intrinsics;
-- Arrow: A project that provides abstractions and APIs over immutable arrays of fixed-width or encoded data.
+- Arrow: A project that provides abstractions, APIs and kernels over immutable arrays of fixed-width or encoded data (also SIMD).
 
 Currently I'm only thinking about performance on recent intel CPUs, e.g., those with `avx2` instructions.
 I also typically don't need to think about columns with more values than can be expressed with 32-bit indexes.
